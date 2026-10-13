@@ -1,0 +1,66 @@
+export type Tour = {
+  id: string;
+  name: string;
+  days: number;
+  audience: string;
+  description: string;
+  image: string;
+  label: string;
+  destinations: string[];
+  itinerary: string[];
+  included: string[];
+  excluded: string[];
+  group: string;
+};
+export type Guide = {
+  id: string;
+  name: string;
+  role: string;
+  years: number;
+  languages: string[];
+  specialties: string[];
+  bio: string;
+  image: string;
+  gallery: string[];
+};
+export type Destination = {
+  id: string;
+  name: string;
+  region: string;
+  image: string;
+  description: string;
+  duration: string;
+  activities: string[];
+};
+export type Review = {
+  id: string;
+  guide_id: string;
+  customer_name: string;
+  country: string;
+  rating: number;
+  body: string;
+  photos: string[];
+  sample?: boolean;
+  status?: string;
+  booking_id?: string;
+  user_id?: string;
+};
+export type BookingStatus = "Pending" | "Accepted" | "Declined" | "Completed";
+export type Booking = {
+  id: string;
+  user_id: string;
+  customer_name: string;
+  email: string;
+  phone: string;
+  selection: string;
+  guide_id: string | null;
+  tour_id: string | null;
+  start_date: string;
+  end_date: string;
+  group_size: number;
+  pickup: string;
+  requirements: string;
+  status: BookingStatus;
+  created_at: string;
+};
+export type Customer = { id: string; email: string; name: string };

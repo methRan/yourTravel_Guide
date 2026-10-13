@@ -1,0 +1,103 @@
+import type { Tour } from "../types";
+import { destinations } from "./destinations";
+const included = [
+  "Private transport with a local driver-guide",
+  "Flexible itinerary planning",
+  "Airport pickup by arrangement",
+  "Local recommendations and on-trip support",
+];
+const excluded = [
+  "Flights and visa fees",
+  "Accommodation and meals unless quoted",
+  "Entrance tickets and safari fees",
+  "Travel insurance and personal expenses",
+];
+export const packages: Tour[] = [
+  {
+    id: "highlights",
+    name: "Sri Lanka Highlights",
+    days: 3,
+    audience: "Short stays",
+    label: "A LITTLE TASTE OF THE ISLAND",
+    description:
+      "Ancient wonders, warm welcomes, and a little adventure. Make a short stay feel like a real escape.",
+    image: destinations[0].image,
+    destinations: ["Sigiriya", "Dambulla", "Kandy"],
+    group: "1–6 travellers",
+    itinerary: [
+      "Welcome to Sri Lanka. Travel to Sigiriya and settle into village life.",
+      "Climb Sigiriya, discover Dambulla’s cave temples, and share a local lunch.",
+      "Explore Kandy’s temples and gardens before your onward journey.",
+    ],
+    included,
+    excluded,
+  },
+  {
+    id: "discover",
+    name: "Discover Sri Lanka",
+    days: 7,
+    audience: "First-time visitors",
+    label: "OUR FAVOURITE FIRST JOURNEY",
+    description:
+      "From ancient cities to the misty hills and sun-kissed coast. A thoughtful introduction to our island.",
+    image: destinations[1].image,
+    destinations: [
+      "Sigiriya",
+      "Kandy",
+      "Nuwara Eliya",
+      "Ella",
+      "Yala",
+      "Mirissa",
+    ],
+    group: "1–6 travellers",
+    itinerary: [
+      "Airport welcome and a relaxed journey to Sigiriya.",
+      "Explore the cultural triangle and a village cooking experience.",
+      "Travel to Kandy for temples and botanical gardens.",
+      "Visit tea country and continue by scenic train, subject to ticket availability.",
+      "Walk Ella’s mountain trails and visit the Nine Arch Bridge.",
+      "Explore Yala with a responsible safari team, then head to the coast.",
+      "A slow morning in Mirissa before your onward transfer.",
+    ],
+    included,
+    excluded,
+  },
+  {
+    id: "complete",
+    name: "The Complete Island Experience",
+    days: 12,
+    audience: "Curious explorers",
+    label: "MORE TIME. MORE DISCOVERY.",
+    description:
+      "Take the scenic route. A deeper journey through Sri Lanka’s culture, wild places, and beautiful coast.",
+    image: destinations[2].image,
+    destinations: [
+      "Negombo",
+      "Anuradhapura",
+      "Sigiriya",
+      "Kandy",
+      "Nuwara Eliya",
+      "Ella",
+      "Yala",
+      "Mirissa",
+      "Galle",
+    ],
+    group: "1–8 travellers",
+    itinerary: [
+      "Welcome and unwind in Negombo.",
+      "Journey through the sacred city of Anuradhapura.",
+      "Travel to Sigiriya and explore nearby villages.",
+      "Discover Sigiriya and Dambulla’s cave temples.",
+      "Experience Kandy’s living traditions.",
+      "Slow down in Nuwara Eliya’s tea gardens.",
+      "Ride the scenic train to Ella, subject to ticket availability.",
+      "A day for mountain walks and local food in Ella.",
+      "A respectful wildlife safari in Yala.",
+      "Head to Mirissa for a seaside escape.",
+      "Explore Galle Fort and the southern coast.",
+      "Enjoy a final island breakfast and your airport transfer.",
+    ],
+    included,
+    excluded,
+  },
+];
